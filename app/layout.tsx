@@ -9,10 +9,9 @@ const poppins = Poppins({
     variable: '--font-poppins',
 })
 
-
 export const metadata: Metadata = {
-  title: "Store XDrive",
-  description: "Store XDrive - The best drive in world",
+  title: "StoreIt",
+  description: "StoreIt - The only storage solution you need.",
 };
 
 export default function RootLayout({
@@ -22,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} font-poppins antialiased`}>{children}</body>
+      <body
+        className={`${poppins.variable} font-poppins antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
