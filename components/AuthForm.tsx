@@ -17,6 +17,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { createAccount } from "@/lib/actions/user.actions";
+import OtpModal from "./OTPModal";
 
 
 type FormType = "sign-in" | "sign-up";
@@ -141,6 +142,11 @@ function AuthForm({ type }: { type: FormType }) {
           </div>
         </form>
       </Form>
+      {/* otp verification */}
+
+      {accountId && (
+        <OtpModal email={form.getValues("email")} accountId={accountId} />
+      )}
     </>
   );
 }
