@@ -7,6 +7,7 @@ import { parseStringify } from "@/lib/utils";
 import { cookies } from "next/headers";
 // import { avatarPlaceholderUrl } from "@/constants";
 import { redirect } from "next/navigation";
+import { avatarPlaceholderUrl } from "@/constants";
 
 const getUserByEmail = async (email: string) => {
   const { databases } = await createAdminClient();
@@ -59,7 +60,7 @@ export const createAccount = async ({
       {
         fullName,
         email,
-        avatar: "https://avatars.githubusercontent.com/u/60979458?v=4&size=64",
+        avatar: avatarPlaceholderUrl,
         accountId,
       },
     );
